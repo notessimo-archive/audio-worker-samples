@@ -1,0 +1,5 @@
+-lib audio-player
+-lib audio-worker
+-cp src
+-js bin/js/bin/app.js
+-main Workload

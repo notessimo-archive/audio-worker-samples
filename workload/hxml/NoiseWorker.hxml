@@ -1,0 +1,18 @@
+##GOLEM##
+-main NoiseWorker
+-cp ../src
+-js ../bin/js/bin/noise-worker.js
+-lib golems
+-lib audio-worker
+-dce no
+
+--next
+
+##GOLEM##
+-main NoiseWorker
+-cp ../src
+-swf ../bin/swf/noise-worker.swf
+-swf-version 11.4
+-lib golems
+-lib audio-worker
+-dce no

@@ -1,0 +1,19 @@
+##GOLEM##
+-main SinWorker
+-cp ../src
+-js ../bin/js/bin/sin-worker.js
+-lib golems
+-lib audio-worker
+-lib fs-utils
+-dce no
+
+--next
+
+##GOLEM##
+-main SinWorker
+-cp ../src
+-swf ../bin/swf/sin-worker.swf
+-swf-version 11.4
+-lib golems
+-lib audio-worker
+-dce no
