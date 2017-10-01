@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+
+  <meta title="Sin Worker" package="com.failsafegames.sinworker" version="1.0.0" company="FailSafe Games" />
+
+  <meta package="com.failsafegames.mac-sinworker" if="mac" />
+
+  <window width="800" height="600" background="#FFFFFF" fps="60" />
+  <window width="0" height="0" if="mobile" />
+  <window width="0" height="0" background="" if="html5" />
+  <window vsync="true" if="desktop" />
+
+  <app main="SinOpenFL" path="bin/openfl" file="Sin" />
+
+  <source path="src" />
+
+  <haxelib name="openfl" />
+  <haxelib name="audio-worker" />
+  <haxelib name="audio-player" />
+
+  <config:ios deployment="6.0" />
+  <certificate team-id="P7K4SUSDX6" />
+
+</project>

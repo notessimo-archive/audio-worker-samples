@@ -8,7 +8,14 @@ class NoiseWorker extends BasicWorker<AudioWorkerParams<Void>, Float32Array> {
         var buffer : Float32Array = new Float32Array( params.samples << 1 );
 
         for( i in 0...params.samples ) {
-            var noise = Math.random() * 2 - 1;
+            
+            // Unnecessary heavy load noise
+            var noise = 0.0;
+            var sign = Math.random() < 0.5 ? -1 : 1;
+            var n = 1000;
+            for( j in 0...n ) noise += sign * Math.random() / n;
+            noise = noise > 1 ? 1 : noise < 0 ? 0 : noise;
+
             buffer.set(i << 1, noise); // Left
             buffer.set(i << 1 + 1, noise); // Right
         }
