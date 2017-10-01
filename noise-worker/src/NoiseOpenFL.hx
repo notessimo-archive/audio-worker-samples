@@ -1,4 +1,5 @@
 import openfl.display.Sprite;
+import openfl.events.Event;
 
 class NoiseOpenFL extends Sprite {
     
@@ -23,7 +24,7 @@ class NoiseOpenFL extends Sprite {
             lastTimer = Date.now().getTime();
 
             circle.y = circle.x += delta * speed;
-            if( circle.x > 200 || circle.x < 0 ) speed *= -1;
+            if( circle.x > 200 || circle.x < 0 ) circle.y = circle.x += delta * (speed *= -1);
         });
     }
 }
