@@ -26,7 +26,7 @@ class Sin {
             .useGenerator(worker.generator)
             .play();
 
-        // Stop it after 3 seconds
+        // Stop it after 5 seconds
         Timer.delay(() -> {
             worker.stop();
             audio.stop();
